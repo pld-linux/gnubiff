@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	gnome		# wuild without gnome support
+%bcond_without	gnome		# build without GNOME support
+#
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
@@ -73,7 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*.png
 %{_datadir}/sounds/%{name}
 
-%if ${with gnome}
+%if %{with gnome}
 %{_libdir}/bonobo/servers/*.server
 %{_datadir}/gnome-*/ui/*.xml
 %endif
