@@ -1,12 +1,12 @@
-diff -urN aaa/gnubiff-1.0.5/configure.ac gnubiff-1.0.5/configure.ac
---- aaa/gnubiff-1.0.5/configure.ac	2003-11-17 16:24:27.000000000 +0100
-+++ gnubiff-1.0.5/configure.ac	2003-11-20 16:52:49.000000000 +0100
-@@ -65,7 +65,7 @@
- dnl directory; configure checks for this file's existence to make sure
- dnl that the directory that it is told contains the source code in fact
- dnl does.
--AC_CONFIG_SRCDIR([src/gnubiffGTK.cc])
-+AC_CONFIG_SRCDIR([src/gnubiff.cc])
+diff -urN aaa/gnubiff-1.0.6/configure.ac gnubiff-1.0.6/configure.ac
+--- aaa/gnubiff-1.0.6/configure.ac	2003-11-24 09:49:27.000000000 +0100
++++ gnubiff-1.0.6/configure.ac	2003-12-13 13:28:05.000000000 +0100
+@@ -73,7 +73,7 @@
+ dnl containing C preprocessor #define statements, and replace `@DEFS@'
+ dnl in generated files with `-DHAVE_CONFIG_H' instead of the value of
+ dnl DEFS. The usual name for header is `config.h'.
+-AM_CONFIG_HEADERS([config/config.h:config/config.h.in])
++AC_CONFIG_HEADERS([config/config.h:config/config.h.in])
  
- dnl syntax: AC_CONFIG_HEADERS (header ..., [cmds], [init-cmds])
- dnl This macro is one of the instantiating macros. Make AC_OUTPUT
+ dnl Automake generates rules to automatically rebuild `Makefile's,
+ dnl `configure', and other derived files like `Makefile.in'.
