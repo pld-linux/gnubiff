@@ -9,7 +9,7 @@ Version:	2.1.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://osdn.dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	b6ccb69dbc44a59ea166d7cb9cc3e97e
 URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
