@@ -15,9 +15,9 @@ URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-%{?with_gnome:Buildrequires:	gnome-panel-devel >= 2.4.0}
+%{?with_gnome:BuildRequires:	gnome-panel-devel >= 2.4.0}
 BuildRequires:	gtk+2-devel >= 2:2.4.3
-Buildrequires:	intltool
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 1:2.4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	openssl-devel >= 0.9.7d
