@@ -1,17 +1,22 @@
+#
+# Conditional build:
+%bcond_without	gnome		# wuild without gnome support
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
-Version:	1.0.8
+Version:	1.0.9
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	e1ffa75c45b03db7a7572f6d25ec4f94
+# Source0-md5:	a00f16fe1348f8a9734d3b903127decd
+Patch0:		%{name}-deprecated.patch
 URL:		http://gnubiff.sourceforge.net/
-BuildRequires:	GConf2-devel >= 2.4.0
+%{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
 BuildRequires:	autoconf
 BuildRequires:	automake
-Buildrequires:	gnome-panel-devel >= 2.4.0
+%{?with_gnome:Buildrequires:	gnome-panel-devel >= 2.4.0}
+Buildrequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	popt-devel
 BuildRequires:	openssl-devel >= 0.9.7c
@@ -28,13 +33,15 @@ wy¶wietla nag³ówki i pozwala przeczytaæ pierwsze linie nowych listów.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+intltoolize --copy --force
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
-	--with-gnome \
+	%{?with_gnome:--with-gnome} \
 	--with-password
 
 %{__make}
@@ -60,10 +67,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/bonobo/servers/*.server
-%{_datadir}/gnome-*/ui/*.xml
 %{_datadir}/%{name}
 %{_infodir}/*.info*
 %{_mandir}/man1/%{name}.1*
 %{_pixmapsdir}/*.png
 %{_datadir}/sounds/%{name}
+
+%if ${with gnome}
+%{_libdir}/bonobo/servers/*.server
+%{_datadir}/gnome-*/ui/*.xml
+%endif
