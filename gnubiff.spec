@@ -5,22 +5,24 @@
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
-Version:	1.0.10
+Version:	1.4.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	96c456119d73fb20c169d3e01e5f48d9
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	11dca9aa4be57a73670243614ee1ee3d
 Patch0:		%{name}-deprecated.patch
 URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
 BuildRequires:	autoconf
 BuildRequires:	automake
 %{?with_gnome:Buildrequires:	gnome-panel-devel >= 2.4.0}
+BuildRequires:	gtk+2-devel >= 2:2.4.3
 Buildrequires:	intltool
-BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	popt-devel
+BuildRequires:	libglade2-devel >= 1:2.4.0
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	popt-devel
+Requires:	gtk+2 >= 2:2.4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
