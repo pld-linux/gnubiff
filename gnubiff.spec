@@ -5,16 +5,16 @@
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
-Version:	1.4.0
+Version:	2.0.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	11dca9aa4be57a73670243614ee1ee3d
-Patch0:		%{name}-deprecated.patch
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	4963ff7e23cdc5396cdda035554e46c9
+Patch0:		%{name}-gcc34.patch
 URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 %{?with_gnome:Buildrequires:	gnome-panel-devel >= 2.4.0}
 BuildRequires:	gtk+2-devel >= 2:2.4.3
@@ -74,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_infodir}/*.info*
 %{_mandir}/man1/%{name}.1*
 %{_pixmapsdir}/*.png
-%{_datadir}/sounds/%{name}
 
 %if %{with gnome}
 %{_libdir}/bonobo/servers/*.server
