@@ -1,13 +1,12 @@
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	fd2bb894b3fcac3baf781ffa6ccd8de3
-Patch0:		%{name}-password_storage.patch
+# Source0-md5:	e1ffa75c45b03db7a7572f6d25ec4f94
 URL:		http://gnubiff.sourceforge.net/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
@@ -29,7 +28,6 @@ wy¶wietla nag³ówki i pozwala przeczytaæ pierwsze linie nowych listów.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__aclocal}
