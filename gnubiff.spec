@@ -19,7 +19,9 @@ BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.4.3
 Buildrequires:	intltool
 BuildRequires:	libglade2-devel >= 1:2.4.0
+BuildRequires:	libstdc++-devel
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 Requires:	gtk+2 >= 2:2.4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
