@@ -1,0 +1,11 @@
+diff -urN aa/gnubiff-1.0.9/src/Makefile.am gnubiff-1.0.9/src/Makefile.am
+--- aa/gnubiff-1.0.9/src/Makefile.am	2003-11-17 16:07:52.000000000 +0100
++++ gnubiff-1.0.9/src/Makefile.am	2004-02-16 16:57:14.529206312 +0100
+@@ -11,7 +11,6 @@
+ 	-DG_DISABLE_DEPRECATED				\
+ 	-DGDK_DISABLE_DEPRECATED			\
+ 	-DGDK_PIXBUF_DISABLE_DEPRECATED			\
+-	-DGTK_DISABLE_DEPRECATED			\
+ 	-DGNOME_DISABLE_DEPRECATED			\
+ 	-DGNOME_VFS_DISABLE_DEPRECATED			\
+ 	-DLIBGLADE_DISABLE_DEPRECATED			\
