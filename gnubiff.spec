@@ -9,7 +9,7 @@ Version:	2.1.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://heanet.dl.sourceforge.net/gnubiff/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gnubiff/%{name}-%{version}.tar.gz
 # Source0-md5:	4832f7d100b8f476082191a4c66a772f
 URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
