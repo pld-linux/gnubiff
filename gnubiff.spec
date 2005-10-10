@@ -5,12 +5,12 @@
 Summary:	Mail notification program
 Summary(pl):	Program powiadamiaj±cy o nowej poczcie
 Name:		gnubiff
-Version:	2.1.5
+Version:	2.1.6
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gnubiff/%{name}-%{version}.tar.gz
-# Source0-md5:	5b8c406042028558a0cd3d24ec2cf199
+# Source0-md5:	e284c22bdc3f4d263cd874fddbcfb950
 URL:		http://gnubiff.sourceforge.net/
 %{?with_gnome:BuildRequires:	GConf2-devel >= 2.4.0}
 BuildRequires:	autoconf >= 2.53
