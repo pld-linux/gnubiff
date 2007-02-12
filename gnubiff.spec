@@ -3,7 +3,7 @@
 %bcond_without	gnome		# build without GNOME support
 #
 Summary:	Mail notification program
-Summary(pl):	Program powiadamiaj±cy o nowej poczcie
+Summary(pl.UTF-8):   Program powiadamiajÄ…cy o nowej poczcie
 Name:		gnubiff
 Version:	2.2.0
 Release:	1
@@ -33,9 +33,9 @@ gnubiff is a mail notification program that checks for mail, displays
 headers when new mail has arrived and allow to read first lines of new
 mails.
 
-%description -l pl
-gnubiff jest programem powiadamiaj±cym, który sprawdza pocztê,
-wy¶wietla nag³ówki i pozwala przeczytaæ pierwsze linie nowych listów.
+%description -l pl.UTF-8
+gnubiff jest programem powiadamiajÄ…cym, ktÃ³ry sprawdza pocztÄ™,
+wyÅ›wietla nagÅ‚Ã³wki i pozwala przeczytaÄ‡ pierwsze linie nowych listÃ³w.
 
 %prep
 %setup -q
