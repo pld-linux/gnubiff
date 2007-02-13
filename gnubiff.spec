@@ -3,7 +3,7 @@
 %bcond_without	gnome		# build without GNOME support
 #
 Summary:	Mail notification program
-Summary(pl.UTF-8):   Program powiadamiający o nowej poczcie
+Summary(pl.UTF-8):	Program powiadamiający o nowej poczcie
 Name:		gnubiff
 Version:	2.2.0
 Release:	1
