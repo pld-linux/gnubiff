@@ -16,7 +16,7 @@ URL:		http://gnubiff.sourceforge.net/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	fam-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 %{?with_gnome:BuildRequires:	gnome-panel-devel >= 2.4.0}
 BuildRequires:	gtk+2-devel >= 2:2.4.3
 BuildRequires:	intltool
